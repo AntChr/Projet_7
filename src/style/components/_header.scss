@@ -1,0 +1,52 @@
+/* _Header */
+header {
+display: flex;
+justify-content: space-between;
+width: 90%;
+height: 68px;
+margin: 40px 100px 30px 100px;
+
+
+
+nav {
+display: flex;
+justify-content: space-around;
+align-items: center;
+width: auto;
+height: auto;
+
+
+
+/* Accueil */
+.Header_Accueil{
+    margin-right: 50px;
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 142.6%;
+/* or 34px */
+display: flex;
+align-items: flex-end;
+text-align: right;
+text-decoration-line: underline;
+
+color: #FF6060;
+
+}
+
+/* A Propos */
+
+.Header_Apropos{
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 142.6%;
+/* or 34px */
+display: flex;
+align-items: flex-end;
+text-align: right;
+
+color: #FF6060;
+}
+}
+}

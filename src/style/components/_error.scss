@@ -1,0 +1,51 @@
+
+.block_error {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.Error__title{
+    width: auto;
+    margin: 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 288px;
+    line-height: 142.6%;
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #FF6060;
+}
+
+h2{
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 142.6%;
+
+
+
+color: #FF6060;
+}
+
+
+.Error_Accueil{
+margin-top: 100px;
+margin-bottom: 85px;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 142.6%;
+/* identical to box height, or 26px */
+display: flex;
+align-items: flex-end;
+text-decoration-line: underline;
+
+color: #FF6060;
+}
