@@ -10,12 +10,6 @@ const Banner = () => {
     );
 }
 
-const Bannerabout = () => {
-    return (
-        <div className="banner__about">
 
-        </div>
-    )
-}
 
-export default (Banner,Bannerabout)
+export default Banner

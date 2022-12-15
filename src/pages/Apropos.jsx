@@ -8,6 +8,7 @@ function Apropos() {
       <div>
         <Header />
         <main className="container__about">
+          <div className="banner__about"></div>
         <Bannerabout /> 
         <CollapseApp />
         </main>

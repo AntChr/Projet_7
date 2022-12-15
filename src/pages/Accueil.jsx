@@ -6,6 +6,7 @@ import logements from '../ressources/logements.json'
 import { Link } from 'react-router-dom'
 import Box from '../components/Box'
 
+
 function Accueil() {
   const [logementData, setLogementData] = useState([])
 
