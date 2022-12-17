@@ -1,0 +1,86 @@
+    .collapseapp__Fiabilité,
+    .collapseapp__Respect,
+    .collapseapp__Service,
+    .collapseapp__Sécurité {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        margin-left: 10%;
+        margin-right: 10%;
+        &__title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1;
+            border-radius: 5px;
+            padding: 5px 15px 5px 15px;
+            background: #FF6060;
+
+            h2{
+                font-style: normal;
+                color: #FFFFFF;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 142.6%
+            }
+        }
+        &__txt{
+            position: relative;
+            bottom: 10px;
+            padding: 36px 27px 19px 18px;
+            background: #F6F6F6;
+            border-radius: 5px;
+            p{
+              font-style: normal;
+              font-weight: 400;
+              font-size: 24px;
+              color: #FF6060; 
+            }
+        }
+    }
+    .container__DE{
+        display: flex;
+        justify-content: space-between;
+        }
+    .collapseapp__Description,
+    .collapseapp__Équipements{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 100px;
+        width: 582px;
+
+        &__title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1;
+            border-radius: 5px;
+            padding: 5px 15px 5px 15px;
+            background: #FF6060;
+
+            h2{
+                font-style: normal;
+                color: #FFFFFF;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 142.6%
+            }
+        }
+        &__txt{
+            position: relative;
+            bottom: 10px;
+            padding: 40px 27px 19px 18px;
+            background: #F6F6F6;
+            border-radius: 5px;
+            height: 249px;
+            p{
+              font-style: normal;
+              font-weight: 400;
+              font-size: 24px;
+              color: #FF6060; 
+            }
+            li{
+                list-style-type: none;
+            }
+        }
+}

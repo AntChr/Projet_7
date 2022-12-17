@@ -1,44 +1,41 @@
-import arrowup from '../images/arrowup.svg';
-import arrowdown from '../images/arrowdown.svg';
-import { useEffect, useState} from 'react'
-import { useParams } from 'react-router-dom';
+import vectorup from '../images/vectorup.png';
+import vectordown from '../images/vectordown.png';
+import { useState} from 'react'
+import '../style/components/_collapse.scss'
 
-function Collapse () {
-    const { id } = useParams()
-    const [isOpen, setIsOpen] = useState(true)
-    const [logementData, setLogementData] = useState({})
-    let logmtdata = logementData.find(el => el.id === id)
-    useEffect(() => {
-        fetch("../logements.json")
-             .then((response) => response.json()
-             .then((data) => setLogementData(data))
-             .catch((error) => console.log("help"))
-         )
-     }, [])
 
-     return isOpen ? (
-        <div className='collapse_open'>
-            <div className='collapse_open_title'>
-            <h2>Équipements</h2>
-            <button className='collapse_open_button' 
-            onClick={() => setIsOpen(false)}>
-                <img src={arrowup} className='collapse_open_button_arrowup' alt='flèche haut' />
-            </button>
-            </div>
-            <div className='equipment_list'>
-            <p>{logmtdata.equipements}</p>
+
+const Collapse = ({titre, description}) => {
+    const [isOpen, setIsOpen] = useState(false)
+
+
+    return isOpen ? (
+        <div>
+                <div className='collapseapp'>
+                    <div className='collapseapp__title'>
+                        <h2>{titre}</h2>
+                        <span className={`collapseapp__vector__${isOpen}`} onClick={() => setIsOpen(!isOpen)}>
+                        <img src={vectordown} alt='flèche bas' />
+                        </span>
+                    </div>
+                </div>
+        </div>
+       
+     ) : (
+        <div>
+            <div className='collapseapp'>
+                <div className='collapseapp__title'>
+                    <h2 >{titre}</h2>
+                    <span className={`collapseapp__vector__${isOpen}`} onClick={() => setIsOpen(!isOpen)}>
+                    <img src={vectorup} alt='flèche haut' />
+                    </span>
+                </div>
+                <div className='collapseapp__open__txt'>
+                    <p>{description}</p>
+                    </div>
             </div>
         </div>
-     ) : (
-        <div className='collapse_closed_title'>
-            <h2>Équipements</h2>
-            <button className='collapse_closed_button' 
-            onClick={() => setIsOpen(true)}>
-                <img src={arrowdown} className='collapse_open_button_arrowdown' alt='flèche bas' />
-            </button>
-            </div>
      )
-
 
 }
 

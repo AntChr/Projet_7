@@ -1,0 +1,43 @@
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.container__tag{
+    display: flex;
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        padding: 0px;
+
+    }
+    &__elt{
+        background: #FF6060;
+        border-radius: 10px;
+        padding: 1% 10% 1% 10%;
+        margin: 10px;
+        list-style-type: none;
+
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 142.6%;
+        white-space: nowrap;
+
+        color: #ffffff;
+    }
+}
+
+.container__description{
+    display: flex;
+    justify-content: space-between;
+    height: 250px;
+    &__hostrating{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+.logement__rating{
+    padding-bottom: 30%;
+}
