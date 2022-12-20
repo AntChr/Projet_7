@@ -8,6 +8,8 @@ import "../style/components/_logement.scss"
 import LogementTitle from "../components/LogementTitle";
 import Hostprofile from "../components/Hostprofile";
 import Rating from "../components/Rating";
+import Slideshow from "../components/Slideshow";
+
 
 function Logement() {
   const [logementData, setLogementData] = useState([])
@@ -25,16 +27,19 @@ function Logement() {
         <div>
           <Header />
           <main>
+            <Slideshow slides={logementID.pictures} />
             <div className="container__description">
               <div className="container__description__tiloctag">
                   <LogementTitle title={logementID.title} location={logementID.location}/>
-                  <div className="container__tag">
-                    <ul className="container__tag__list">
-                      {logementID.tags.map(tag =>             
-                        <li className="container__tag__elt">{tag}</li>)}
-                    </ul>
+                    <div className="container__description__tiloctag__tag">
+                      <ul className="container__description__tiloctag__tag__list">
+                        {logementID.tags.map(tag =>             
+                          <li className="container__description__tiloctag__tag__list__elt">
+                              {tag}
+                          </li>)}
+                      </ul>
+                    </div>
                   </div>
-                </div>
                 <div className="container__description__hostrating">
                   <Hostprofile name={logementID.host.name} picture={logementID.host.picture}/>
                   <Rating rating={logementID.rating} />

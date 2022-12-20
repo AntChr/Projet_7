@@ -1,8 +1,18 @@
+@mixin mobile {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
 
 .block_error {
 display: flex;
 flex-direction: column;
 align-items: center;
+
+@include mobile {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
 }
 .Error__title{
     width: auto;
@@ -18,6 +28,17 @@ align-items: center;
     text-align: center;
     
     color: #FF6060;
+
+    @include mobile {
+        margin-bottom: 11px;
+        max-width: 198px;
+        max-height: 99px;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 96px;
+        line-height: 142.6%;
+    }
 }
 
 h2{
@@ -31,6 +52,19 @@ line-height: 142.6%;
 
 
 color: #FF6060;
+
+@include mobile {
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    max-width: 260px;
+    max-height: 52px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+}
 }
 
 
@@ -42,10 +76,18 @@ font-style: normal;
 font-weight: 500;
 font-size: 18px;
 line-height: 142.6%;
-/* identical to box height, or 26px */
-display: flex;
-align-items: flex-end;
+
 text-decoration-line: underline;
 
 color: #FF6060;
+
+@include mobile {
+    max-width: 221px;
+    max-height: 20px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 142.6%;
+}
 }

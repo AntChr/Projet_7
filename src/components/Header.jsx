@@ -2,13 +2,16 @@ import { Link } from 'react-router-dom'
 import logo from '../images/logo.svg';
 import '../style/components/_header.scss'
 
+
 function Header () {
     return (
                     <header>
-                    <img src={logo} className="Header_logo" alt="logo" />
+                        <div className='Header_logo'>
+                            <img src={logo} alt="logo" />
+                        </div>
                     <nav>
-                        <Link className='Header_Accueil' to="/">Accueil</Link>
-                        <Link className='Header_Apropos' to="/apropos">À propos</Link>
+                        <Link className='Header_Accueil' to="/">ACCUEIL</Link>
+                        <Link className='Header_Apropos' to="/apropos">À PROPOS</Link>
                     </nav>
                     </header>
     )

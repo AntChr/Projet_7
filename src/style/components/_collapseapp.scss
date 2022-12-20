@@ -1,3 +1,9 @@
+@mixin mobile {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
     .collapseapp__Fiabilité,
     .collapseapp__Respect,
     .collapseapp__Service,
@@ -7,6 +13,10 @@
         margin-bottom: 30px;
         margin-left: 10%;
         margin-right: 10%;
+
+        @include mobile{
+            margin: 0px 0px 20px 0px;
+        }
         &__title {
             display: flex;
             justify-content: space-between;
@@ -22,6 +32,9 @@
                 font-size: 24px;
                 font-weight: 500;
                 line-height: 142.6%
+            }
+            img{
+                cursor: pointer;
             }
         }
         &__txt{
@@ -35,12 +48,28 @@
               font-weight: 400;
               font-size: 24px;
               color: #FF6060; 
+
+              @include mobile {
+
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 142.6%;
+              }
+            }
+            @include mobile {
+                max-height: 144px;
             }
         }
     }
     .container__DE{
         display: flex;
         justify-content: space-between;
+
+        @include mobile {
+            max-width: auto;
+            flex-direction: column;
+        }
         }
     .collapseapp__Description,
     .collapseapp__Équipements{
@@ -48,6 +77,11 @@
         flex-direction: column;
         margin-bottom: 100px;
         width: 582px;
+
+        @include mobile {
+            width: auto;
+            margin-bottom: 20px;
+        }
 
         &__title {
             display: flex;
@@ -63,7 +97,17 @@
                 color: #FFFFFF;
                 font-size: 24px;
                 font-weight: 500;
-                line-height: 142.6%
+                line-height: 142.6%;
+
+                @include mobile {
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 13px;
+                    line-height: 142.6%;
+                }
+            }
+            img{
+                cursor: pointer;
             }
         }
         &__txt{
@@ -73,11 +117,24 @@
             background: #F6F6F6;
             border-radius: 5px;
             height: 249px;
+
+            @include mobile {
+                max-height: 144px;
+                padding: 23px 7px 2px 12px;
+            }
             p{
               font-style: normal;
               font-weight: 400;
               font-size: 24px;
               color: #FF6060; 
+
+              @include mobile {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 142.6%;
+
+              }
             }
             li{
                 list-style-type: none;
