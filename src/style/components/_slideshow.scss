@@ -11,10 +11,13 @@
     margin-bottom: 30px;
 
     border-radius: 25px;
+    white-space: nowrap;
+    transform: ease 1000ms;
     @include mobile {
         width: auto;
         max-height: 255px;
     }
+
     &__backgroundimg{
         width: 100%;
         height: 100%;

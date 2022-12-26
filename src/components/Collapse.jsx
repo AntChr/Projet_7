@@ -1,18 +1,17 @@
 import vectorup from '../images/vectorup.png';
 import vectordown from '../images/vectordown.png';
 import { useState} from 'react'
-import '../style/components/_collapse.scss'
+import '../style/components/_collapseapp.scss'
 
 
-
-const Collapse = ({titre, description}) => {
+const CollapseApp = ({titre, description}) => {
     const [isOpen, setIsOpen] = useState(false)
 
 
     return isOpen ? (
         <div>
-                <div className='collapseapp'>
-                    <div className='collapseapp__title'>
+                <div className={`collapseapp__${titre}`}>
+                    <div className={`collapseapp__${titre}__title`}>
                         <h2>{titre}</h2>
                         <span className={`collapseapp__vector__${isOpen}`} onClick={() => setIsOpen(!isOpen)}>
                         <img src={vectordown} alt='flèche bas' />
@@ -23,14 +22,14 @@ const Collapse = ({titre, description}) => {
        
      ) : (
         <div>
-            <div className='collapseapp'>
-                <div className='collapseapp__title'>
+            <div className={`collapseapp__${titre}`}>
+                <div className={`collapseapp__${titre}__title`}>
                     <h2 >{titre}</h2>
                     <span className={`collapseapp__vector__${isOpen}`} onClick={() => setIsOpen(!isOpen)}>
                     <img src={vectorup} alt='flèche haut' />
                     </span>
                 </div>
-                <div className='collapseapp__open__txt'>
+                <div className={`collapseapp__${titre}__txt`}>
                     <p>{description}</p>
                     </div>
             </div>
@@ -39,5 +38,4 @@ const Collapse = ({titre, description}) => {
 
 }
 
-export default Collapse
-
+export default CollapseApp

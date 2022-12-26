@@ -143,10 +143,16 @@ main{
         }
     }
 }
+.logement__host {
+    justify-content: flex-end;
+}
 .logement__rating{
     display: flex;
     align-items: center;
     padding-bottom: 10%;
+    img{
+        margin-right: 10px;
+    }
 
     @include mobile {
         padding-bottom: 0px;

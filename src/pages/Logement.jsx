@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+//import { useEffect, useState } from "react";
+import { Navigate, useParams } from "react-router-dom";
 import logements from '../ressources/logements.json'
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import CollapseApp from "../components/Collapseapp";
+import Collapse from "../components/Collapse";
 import "../style/components/_logement.scss"
 import LogementTitle from "../components/LogementTitle";
 import Hostprofile from "../components/Hostprofile";
@@ -12,18 +12,19 @@ import Slideshow from "../components/Slideshow";
 
 
 function Logement() {
-  const [logementData, setLogementData] = useState([])
   const params = useParams();
+  /*const [logementData, setLogementData] = useState([])
  
 
   useEffect(() => {
-    console.log(logements)
     setLogementData(logements)
-  }, [])
+  }, [])*/
 
-  const logementID = logementData.find(x => x.id === params.id);
-    if (logementID) {
+  const logementID = logements.find(x => x.id === params.id);
+    console.log(logementID)
     return (
+      <>
+      { logementID ? (
         <div>
           <Header />
           <main>
@@ -33,10 +34,13 @@ function Logement() {
                   <LogementTitle title={logementID.title} location={logementID.location}/>
                     <div className="container__description__tiloctag__tag">
                       <ul className="container__description__tiloctag__tag__list">
-                        {logementID.tags.map(tag =>             
-                          <li className="container__description__tiloctag__tag__list__elt">
+                        {logementID.tags.map((tag, t) => {
+                          return (            
+                          <li className="container__description__tiloctag__tag__list__elt" key={t}>
                               {tag}
-                          </li>)}
+                          </li>)
+                          })
+                          }
                       </ul>
                     </div>
                   </div>
@@ -47,20 +51,20 @@ function Logement() {
               </div>
 
             <div className="container__DE">
-                <CollapseApp titre="Description" description={logementID.description}/>
-                <CollapseApp titre="Équipements" description=
-                  {logementID.equipments.map(eqpt =>
-                    <li>{eqpt}</li> )}/>
+                <Collapse titre="Description" description={logementID.description}/>
+                <Collapse titre="Équipements" description=
+                  {logementID.equipments.map((eqpt,t) => {
+                    return (
+                    <li key={t}>{eqpt}</li> )})}/>
             </div>
 
           </main>
           <Footer />
         </div>
-      );
-    } else {
-      return <div>Logement not found</div>
-    }
+    ) : <Navigate replace to="/Error/" />
+  } </>
+  ) 
+}
 
-  }
   
   export default Logement;

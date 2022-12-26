@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import '../style/components/_slideshow.scss'
 import vectorleft from '../images/vectorleft.png'
 import vectorright from '../images/vectorright.png'
@@ -6,6 +6,9 @@ import vectorright from '../images/vectorright.png'
 
 const Slideshow = ({slides}) => {
     const[currentIndex, setCurrentIndex] = useState(0)
+    const delay = 3500
+    const autoScroll = true
+    let slideInterval
     const goToPrevious = () => {
         const isFirstSlide = currentIndex === 0
         const newIndex = isFirstSlide ? slides.length -1 : currentIndex -1
@@ -16,6 +19,15 @@ const Slideshow = ({slides}) => {
         const newIndex = isLastSlide ? 0 : currentIndex +1
         setCurrentIndex(newIndex);
     }
+    const auto = () => {
+        slideInterval = setInterval(goToNext, delay)
+    }
+    useEffect(()=> {
+        if(autoScroll) {
+            auto()
+        }
+        return () => clearInterval(slideInterval);
+    },[currentIndex])
 return (
     <div className="container__carroussel">
         <div className="container__carroussel__left" onClick={goToPrevious}>
