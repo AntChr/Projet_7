@@ -6,12 +6,11 @@ import logements from '../ressources/logements.json'
 import { Link } from 'react-router-dom'
 import Box from '../components/Box'
 
-
+// Page Accueil du site avec un usestate pour appeler les données qui seront utilisés par le composant Box
 function Accueil() {
   const [logementData, setLogementData] = useState([])
 
   useEffect(() => {
-    console.log(logements)
     setLogementData(logements)
   }, [])
   return (
@@ -31,10 +30,6 @@ function Accueil() {
           </main>
           <Footer />
     </div>
-
-
-
   )
 }
-
 export default Accueil;

@@ -16,6 +16,13 @@
         background-color: #FFFFFF;
         padding: 0px;
     }
+
+    @include tablet {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: auto;
+        gap: 30px
+    }
     
     &_card {
         width: 340px;
@@ -23,6 +30,9 @@
 
         @include mobile {
             width: 100%;
+        }
+        @include tablet {
+            width: auto;
         }
         
     }
@@ -33,6 +43,9 @@
         object-fit: cover;
 
         @include mobile {
+            width: 100%;
+        }
+        @include tablet {
             width: 100%;
         }
     }

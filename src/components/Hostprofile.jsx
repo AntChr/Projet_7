@@ -1,7 +1,7 @@
 import React from "react";
 import '../style/components/_hostprofile.scss'
 
-
+// Affichage de la photo profil et du nom du propriétaire
 const Hostprofile = ({name,picture}) => {
     return (
         <div className="logement__host">

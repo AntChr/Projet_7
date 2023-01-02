@@ -1,6 +1,6 @@
 import React from "react"
 
-
+// Affichage de la bannière sur la page accueil
 const Banner = () => {
     return (
         <div className='banner__home'>
@@ -9,7 +9,4 @@ const Banner = () => {
         </div>
     );
 }
-
-
-
 export default Banner

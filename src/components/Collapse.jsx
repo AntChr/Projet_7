@@ -3,10 +3,9 @@ import vectordown from '../images/vectordown.png';
 import { useState} from 'react'
 import '../style/components/_collapseapp.scss'
 
-
+// useState pour afficher ou cacher les différents sections
 const CollapseApp = ({titre, description}) => {
     const [isOpen, setIsOpen] = useState(false)
-
 
     return isOpen ? (
         <div>
@@ -19,7 +18,6 @@ const CollapseApp = ({titre, description}) => {
                     </div>
                 </div>
         </div>
-       
      ) : (
         <div>
             <div className={`collapseapp__${titre}`}>
@@ -35,7 +33,6 @@ const CollapseApp = ({titre, description}) => {
             </div>
         </div>
      )
-
 }
 
 export default CollapseApp

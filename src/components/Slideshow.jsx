@@ -3,7 +3,7 @@ import '../style/components/_slideshow.scss'
 import vectorleft from '../images/vectorleft.png'
 import vectorright from '../images/vectorright.png'
 
-
+//Carrousel qui affiche les photos du logement qui défilent automatiquement ou on peut cliquer sur les flèches pour passer à la suivante
 const Slideshow = ({slides}) => {
     const[currentIndex, setCurrentIndex] = useState(0)
     const delay = 3500
@@ -22,11 +22,13 @@ const Slideshow = ({slides}) => {
     const auto = () => {
         slideInterval = setInterval(goToNext, delay)
     }
+    
     useEffect(()=> {
         if(autoScroll) {
             auto()
         }
         return () => clearInterval(slideInterval);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[currentIndex])
 return (
     <div className="container__carroussel">
@@ -46,5 +48,4 @@ return (
 
 )
 }
-
 export default Slideshow

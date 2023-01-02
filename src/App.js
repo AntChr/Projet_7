@@ -5,6 +5,8 @@ import Apropos from "./pages/Apropos";
 import Error from "./pages/Error";
 import Logement from "./pages/Logement";
 
+// Création des différentes routes du site
+
 const App = () => {
     return (
         <BrowserRouter>
@@ -18,3 +20,4 @@ const App = () => {
     )
 }
 export default App
+

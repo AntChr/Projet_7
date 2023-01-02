@@ -10,18 +10,10 @@ import Hostprofile from "../components/Hostprofile";
 import Rating from "../components/Rating";
 import Slideshow from "../components/Slideshow";
 
-
+//Structure de la fiche logement, utilisation de plusieurs composants pour afficher le carrousel et la description du logement
 function Logement() {
   const params = useParams();
-  /*const [logementData, setLogementData] = useState([])
- 
-
-  useEffect(() => {
-    setLogementData(logements)
-  }, [])*/
-
   const logementID = logements.find(x => x.id === params.id);
-    console.log(logementID)
     return (
       <>
       { logementID ? (
@@ -38,8 +30,7 @@ function Logement() {
                           return (            
                           <li className="container__description__tiloctag__tag__list__elt" key={t}>
                               {tag}
-                          </li>)
-                          })
+                          </li>)})
                           }
                       </ul>
                     </div>
@@ -49,7 +40,6 @@ function Logement() {
                   <Rating rating={logementID.rating} />
                 </div>
               </div>
-
             <div className="container__DE">
                 <Collapse titre="Description" description={logementID.description}/>
                 <Collapse titre="Équipements" description=
@@ -66,5 +56,4 @@ function Logement() {
   ) 
 }
 
-  
   export default Logement;

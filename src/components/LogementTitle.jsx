@@ -1,7 +1,7 @@
 import React from "react";
 import '../style/components/_logementtitle.scss'
 
-
+//Affichage du titre du logement et de sa localisation
 const LogementTitle = ({title,location}) => {
     return (
         <div className="container__description__tiloctag__tiloc">
@@ -15,3 +15,4 @@ const LogementTitle = ({title,location}) => {
     )
 }
 export default LogementTitle
+

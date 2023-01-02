@@ -4,6 +4,12 @@
     }
 }
 
+@mixin tablet {
+    @media screen and (min-width: 769px) and (max-width: 992px) {
+        @content
+    }
+}
+
     .collapseapp__Fiabilité,
     .collapseapp__Respect,
     .collapseapp__Service,
@@ -70,6 +76,10 @@
             max-width: auto;
             flex-direction: column;
         }
+        @include tablet {
+            flex-direction: column;
+            width: 100%;
+        }
         }
     .collapseapp__Description,
     .collapseapp__Équipements{
@@ -81,6 +91,9 @@
         @include mobile {
             width: auto;
             margin-bottom: 20px;
+        }
+        @include tablet {
+            width: auto;
         }
 
         &__title {

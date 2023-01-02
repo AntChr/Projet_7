@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import logo from '../images/logo.svg';
 import '../style/components/_header.scss'
 
-
+// Composant Header utilisable sur toutes les pages du site
 function Header () {
     return (
                     <header>
@@ -16,5 +16,5 @@ function Header () {
                     </header>
     )
 }
-
 export default Header
+

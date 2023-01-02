@@ -1,6 +1,6 @@
 import React from "react";
 
-
+// Affichage de tous les logements de la base de données avec leur image et titre
 const Box = ({cover, title}) => {
     return (
         <div>
@@ -11,3 +11,4 @@ const Box = ({cover, title}) => {
     )
 }
 export default Box
+

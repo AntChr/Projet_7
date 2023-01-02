@@ -2,7 +2,7 @@ import Collapse from "../components/Collapse";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
-
+// Structure de la page A propos avec implémentation direct des données
 function Apropos() {
     return (
       <div>
@@ -20,5 +20,6 @@ function Apropos() {
       </div>
     )
   }
-  
   export default Apropos;
+
+  

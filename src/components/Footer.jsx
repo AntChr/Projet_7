@@ -1,6 +1,7 @@
 import logo from '../images/logo-footer.svg';
 import '../style/components/_footer.scss'
 
+// Footer qui sera affiché sur toutes les pages du site
 function Footer () {
     return (
             <footer>
@@ -9,5 +10,5 @@ function Footer () {
             </footer>
     )
 }
-
 export default Footer
+

@@ -4,7 +4,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 
-
+//Structure de la page Error
 function Error () {
     return (
       <div>
@@ -19,7 +19,5 @@ function Error () {
             )
           }
 
-    
-
-
 export default Error
+
